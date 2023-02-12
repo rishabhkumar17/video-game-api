@@ -37,12 +37,36 @@ button {
   border-radius: 8px;
   margin: 20px;
   font-size: 22px;
-}
-
-input {
   padding-left: 10px;
 }
 
 button {
   cursor: pointer;
+}
+
+.games {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+.game img {
+  width: 80%;
+  margin-top: 10px;
 }

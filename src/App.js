@@ -25,6 +25,8 @@ function App() {
           {searchedGames.map((game, key) => (
             <div className="game" key={key}>
               {game.external}
+              <img src={game.thumb} alt={game.external} />
+              {game.cheapest} $
             </div>
           ))}
         </div>

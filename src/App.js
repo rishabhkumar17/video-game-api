@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
   const [gameTitle, setGameTitle] = useState('');
-  const searchGame = () => {};
+  const searchGame = () => {
+    fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  };
   return (
     <div className="App">
       <div className="searchSection">
@@ -13,7 +17,7 @@ function App() {
           placeholder="Minecraft.."
           onChange={(e) => setGameTitle(e.target.value)}
         />
-        <button>Search Game Title</button>
+        <button onClick={searchGame}>Search Game Title</button>
       </div>
       <div className="dealsSection">
         <h1>Latest Deals</h1>
